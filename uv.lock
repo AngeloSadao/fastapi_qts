@@ -164,14 +164,18 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "fastapi", extra = ["standard"] },
+]
+
+[package.dev-dependencies]
+dev = [
     { name = "pytest" },
 ]
 
 [package.metadata]
-requires-dist = [
-    { name = "fastapi", extras = ["standard"], specifier = ">=0.136.1" },
-    { name = "pytest", specifier = ">=9.0.3" },
-]
+requires-dist = [{ name = "fastapi", extras = ["standard"], specifier = ">=0.136.1" }]
+
+[package.metadata.requires-dev]
+dev = [{ name = "pytest", specifier = ">=9.0.3" }]
 
 [[package]]
 name = "fastar"
